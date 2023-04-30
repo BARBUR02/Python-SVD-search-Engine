@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'browser/base.css' %}">
+    {% block includes %}{% endblock includes %}
+    <title>{%block title %}{% endblock %} </title>
+    <script src="https://kit.fontawesome.com/72ebeb10f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+  <h1>Look <span>IT</span>Up</h1>
+  <nav>
+    <a href={% url 'search-base' %}>Clear results</a>
+  </nav>
+    </header>
+    {% block content %}{% endblock content %}
+</body>
+</html>
